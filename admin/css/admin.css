@@ -1,0 +1,202 @@
+/* Global Variables */
+:root {
+    --ic-primary-clr: #28A9A8;
+    --ic-secondary-clr: #00033D;
+    --ic-box-shadow-one: 0 8px 21px 0 rgba(36, 39, 50, .08);
+    --ic-box-shadow-two: 0 0 10px rgba(40, 168, 169, .1);
+    --ic-transition: all 0.3s ease-in-out;
+}
+
+/*Buttons*/
+.ic-importer-prev-btn {
+    margin-right: 15px !important;
+}
+
+.ic-btn-primary {
+    display: inline-block;
+    padding: 10px 35px;
+    background-color: var(--ic-primary-clr);
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: var(--ic-transition);
+}
+
+.ic-btn-primary:hover {
+    background-color: var(--ic-secondary-clr);
+    color: #fff;
+}
+
+.ic-importer-main {
+    padding: 0 15px;
+    position: relative;
+}
+
+.ic-importer-inner {
+    background-color: #fff;
+    box-shadow: var(--ic-box-shadow-one);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.ic-importer-main h2.ic-header-title {
+    font-size: 26px;
+    color: var(--ic-primary-clr);
+}
+
+.ic-importer-main .ic-column {
+    cursor: pointer;
+}
+
+/* Form */
+.ic_importer_form .alert {
+    display: none;
+}
+
+/*Form fields*/
+.ic-importer-main .form-group {
+    margin-bottom: 15px;
+}
+
+.ic-importer-main .form-control {
+    padding: .375rem .75rem !important;
+    line-height: 1.5 !important;
+}
+
+.ic-importer-main .form-check {
+    padding-left: 0;
+}
+
+.ic-importer-main input[type=checkbox]:checked::before {
+    display: none;
+}
+
+.ic-importer-main input[type=checkbox] {
+    margin: .35em .25rem 0;
+}
+
+/*Ajax Button*/
+.ic-importer-main .ic-ajax-loading {
+    padding-right: 40px;
+    position: relative;
+}
+
+.ic-importer-main .ic-ajax-loading::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    margin-top: -7px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    border-left-color: transparent;
+    border-radius: 50%;
+    vertical-align: middle;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s ease, visibility .2s ease;
+    -webkit-animation: wd-rotate 450ms infinite linear;
+    animation: wd-rotate 450ms infinite linear;
+}
+
+@-webkit-keyframes wd-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wd-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*Form steps*/
+.ic-importer-step {
+    display: none;
+}
+
+.ic-importer-step.ic-importer-step-one {
+    display: block;
+}
+
+
+/* Excel column table */
+.ic-excel-column-table .ic-column {
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--ic-primary-clr);
+}
+
+.ic-importer-main .form-control.active {
+    border: 1px solid var(--ic-primary-clr) !important;
+    box-shadow: 0 0 0 1px var(--ic-primary-clr) !important;
+}
+
+/* instruction */
+.instruction {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.instruction img {
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+/* Info Box */
+.ic-info-box {
+    padding: 60px 0;
+}
+
+.ic-info-box .ic-box-header {
+    font-size: 28px;
+    color: var(--ic-primary-clr);
+    margin-bottom: 20px;
+}
+
+.ic-info-box p {
+    font-size: 16px;
+}
+
+.accordion-button:focus {
+    border-color: var(--ic-primary-clr) !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--ic-primary-clr) !important;
+    background-color: rgba(40, 168, 169, .1) !important;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    input#ic-importer-file {
+        margin-bottom: 30px;
+    }
+
+    .ic-info-box {
+        text-align: center;
+    }
+
+    .ic-info-box img {
+        margin-bottom: 30px;
+    }
+
+    .ic-col-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .instruction {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}
